@@ -1,0 +1,116 @@
+<html>
+<!-- 
+    HTML code information
+    * @ HTML.technologies
+    * @ Version: 1.1.2
+    * @ Build date: May 22 2022
+    * @ Build type: Alpha
+    * @ Registered to: Endless
+
+    * Избавь нас от Юзера глупого, ибо продвинут он стал.
+    * Выправи программы наши кривые, ибо клинит башни нам от конфигураторов и отладчиков.
+    * Открой нам знание, ибо истинно говоришь Ты нам, где тру и фолс.
+    * Откомментируй код наш многомегабайтный, ибо погрязли мы в MD-шниках своих.
+    
+    C Nuestro que estas en la Memoria,
+    Compilado sea tu código,
+    venga a nosotros tu software,
+    carguense tus punteros.
+    así en la RAM como en el Disco Duro,
+    Danos hoy nuestro Array de cada día,
+    Perdona nuestros Warnings,
+    así como nosotros también los eliminamos,
+    no nos dejes caer en Bucles,
+    y libranos del Windows, Enter.
+ -->
+
+<head>
+    <link rel="shortcut icon" href="icons\favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Infovirus.ru / Компьютерные вредоносные программы: от истории до современности</title>
+    <link rel="stylesheet" href="stylecontact.css">
+
+</head>
+
+<body>
+    <!-- Вверх страницы  -->
+    <div id="boxline"></div>
+    <div id="Menu">
+        <div id="menuleft">
+            <p id="maintext1">Курсовая работа</p>
+            <div id="menuline1"></div>
+        </div>
+        <!-- Навигационное меню  -->
+        <div class="button">
+            <ul>
+                <li><a href="main.html"><img src="icons\MainLight.png" />Main</a></li>
+                <li><a href="variation.html"><img src="icons\VariationLight.png" />Variation</a></li>
+                <li><a href="methods.html"><img src="icons\MethodsLight.png" />Methods</a></li>
+                <li><a href="software.html"><img src="icons\softwareLight.png" />Malicious software</a></li>
+            </ul>
+        </div>
+
+        <img id="mainicon" src="icons\image.png" />
+    </div>
+    <!-- Тело страницы (основное)  -->
+    <p id="maintextpage">About me</p>
+    <div id="linepage"></div>
+    <div id="titlepage"></div>
+    <div id="mainpage"></div>
+    <div id="textpage">
+        <p align="justify">
+            Работу выполнил: <br /> 
+            Кузякин Артём Игоревич [ДП - 12]<br /> 
+            <br />
+                      
+        </p>
+    </div>
+    <div id="textpage1">
+        <p align="justify">
+            Надеюсь у вас всё будет хорошо,<br /> 
+            спасибо что посмотрели данную работу, я не <br /> 
+            мало над ней постарался, желаю удачи<br /> 
+                 
+
+        </p>
+    </div>
+    <!-- Нижняя часть страницы  -->
+    <div id="topborder">
+        <p id="menucopyright">Copyright © 2022 Infovirus. All rights reserved.</p>
+        <p id="menucopyright1"><a href="contact.html">Contact Us</a></p>
+    </div>
+    <div id="topborder1"></div>
+
+
+
+    <!-- курсор  -->
+    <div class="dot"></div>
+    <div class="cursor"></div>
+    <!-- js курсор  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let $cursorX = 0, $cursorY = 0, $top = 0, $left = 0, $leftd = 0, $topd = 0;
+            // получаем координаты курсора
+            $(document).mousemove(e => {
+                $cursorX = e.clientX;
+                $cursorY = e.clientY;
+            });
+            // точка, находится ровно там, где и курсор
+            setInterval(() => {
+                $leftd += ($cursorX - $leftd);
+                $topd += ($cursorY - $topd);
+                $('.dot').css({ left: $leftd + 'px', top: $topd + 'px' });
+            }, 1);
+            // окружность доходит до курсора, но замедленно
+            setInterval(() => {
+                $left += ($cursorX - $left) / 10;
+                $top += ($cursorY - $top) / 10;
+                $('.cursor').css({ left: $left + 'px', top: $top + 'px' });
+            }, 6);
+
+        });
+    </script>
+</body>
+
+</html>
